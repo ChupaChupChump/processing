@@ -1,7 +1,7 @@
 class Paddle {
   float x;
   float y = height/2;
-  float w = 10;
+  float w = 18;
   float h = 100;
 
   Paddle(boolean left) {
@@ -22,6 +22,4 @@ class Paddle {
    rectMode(CENTER);
    rect(x, y, w, h);
   }
- 
- 
 }
