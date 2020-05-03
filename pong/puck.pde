@@ -1,8 +1,8 @@
 class Puck {
-  float x = width/2;
-  float y = height/2;
-  float xspeed = random(10);
-  float yspeed = random(10);
+  int x = width/2;
+  int y = height/2;
+  int xspeed = 5;
+  int yspeed = 5;
   int r = 25;
   
   void update() {
@@ -11,8 +11,8 @@ class Puck {
   }
   
   void reset() {
-    x = width/2;
-    y = height/2;
+    x = 400;
+    y = 300;
   }
   
   void edges() {
@@ -22,6 +22,12 @@ class Puck {
       if (x - r > width) {
       reset();
     }
+     if ((y + r) <= y+150 && (y - r) >= y) {
+     if (x - r <= 25) { xspeed *= -1;  println("Circle X: ");
+     print(x);
+     print("touched");
+     }
+     }
   }
   
   void show() {
